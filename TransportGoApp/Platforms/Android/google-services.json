@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "108075530389",
+    "project_id": "transportgoapp",
+    "storage_bucket": "transportgoapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108075530389:android:0968b7bb8888436ecb039c",
+        "android_client_info": {
+          "package_name": "com.licenta.transportgoapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwjWmV1jKGsAZj0BNchZW5p_efifXjvCs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
