@@ -14,6 +14,7 @@ public partial class LoginPage : ContentPage
 
     private async void OnLoginClicked(object sender, EventArgs e)
     {
+      
         var email = EmailEntry.Text;
         var password = PasswordEntry.Text;
 
@@ -21,15 +22,15 @@ public partial class LoginPage : ContentPage
         {
             // Autentificarea utilizatorului
             var userCredential = await _firebaseAuthClient.SignInWithEmailAndPasswordAsync(email, password);
-        }
+        
 
         // Navigare către Dashboard dacă autentificarea reușește
-        //  if (userCredential != null)
-        //{
-        //  await DisplayAlert("Succes", "Autentificare reușită!", "OK");
-        //await Navigation.PushAsync(new DashboardPage());
-        //}
-        //}
+           if (userCredential != null)
+              {
+               await DisplayAlert("Succes", "Autentificare reușită!", "OK");
+              //await Navigation.PushAsync(new DashboardPage());
+              }
+         }
         catch (Exception ex)
         {
             // Gestionare erori
