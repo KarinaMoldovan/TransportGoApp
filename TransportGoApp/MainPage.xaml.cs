@@ -1,12 +1,16 @@
-﻿namespace TransportGoApp
+﻿using Firebase.Auth;
+
+namespace TransportGoApp
 {
+
     public partial class MainPage : ContentPage
     {
         int count = 0;
-
-        public MainPage()
+        private readonly FirebaseAuthClient _firebaseAuthClient;
+        public MainPage(FirebaseAuthClient firebaseAuthClient)
         {
             InitializeComponent();
+            _firebaseAuthClient = firebaseAuthClient;
         }
 
         private void OnCounterClicked(object sender, EventArgs e)
@@ -19,6 +23,10 @@
                 CounterBtn.Text = $"Clicked {count} times";
 
             SemanticScreenReader.Announce(CounterBtn.Text);
+        }
+        private async void OnLoginClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LoginPage(_firebaseAuthClient));
         }
     }
 

@@ -31,6 +31,8 @@ namespace TransportGoApp
             }));
 
             builder.Services.AddSingleton<LoginPage>();
+            builder.Services.AddSingleton<MainPage>();
+
             return builder.Build();
         }
     }
